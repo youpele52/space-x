@@ -22,11 +22,17 @@ export const GET_LAUNCH_DETAILS = gql`
     launch(id: $id) {
       id
       mission_name
-      launch_year
+      launch_date_utc
       details
       links {
         flickr_images
         mission_patch
+      }
+      rocket {
+        rocket_name
+      }
+      launch_site {
+        site_name_long
       }
     }
   }

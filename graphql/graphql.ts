@@ -1352,10 +1352,16 @@ export type LaunchDetailsQuery = (
   { __typename?: 'Query' }
   & { launch?: Maybe<(
     { __typename?: 'Launch' }
-    & Pick<Launch, 'id' | 'mission_name' | 'launch_year' | 'details'>
+    & Pick<Launch, 'id' | 'mission_name' | 'launch_date_utc' | 'details'>
     & { links?: Maybe<(
       { __typename?: 'LaunchLinks' }
       & Pick<LaunchLinks, 'flickr_images' | 'mission_patch'>
+    )>, rocket?: Maybe<(
+      { __typename?: 'LaunchRocket' }
+      & Pick<LaunchRocket, 'rocket_name'>
+    )>, launch_site?: Maybe<(
+      { __typename?: 'LaunchSite' }
+      & Pick<LaunchSite, 'site_name_long'>
     )> }
   )> }
 );
@@ -1410,11 +1416,17 @@ export const LaunchDetailsDocument = gql`
   launch(id: $id) {
     id
     mission_name
-    launch_year
+    launch_date_utc
     details
     links {
       flickr_images
       mission_patch
+    }
+    rocket {
+      rocket_name
+    }
+    launch_site {
+      site_name_long
     }
   }
 }
