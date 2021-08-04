@@ -75,7 +75,7 @@ export default function Launch() {
           </article>
         </div>
 
-        <ul className='grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 place-content-center ml-0 md:ml-5 lg:ml-28 '>
+        <ul className='grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 place-content-center ml-0 md:ml-5 lg:ml-28 mb-48'>
           {launchData &&
             launchData.links.flickr_images.map((image, index) => (
               <li className='carded ' key={index}>
