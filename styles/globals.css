@@ -1,0 +1,210 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply text-gray-700;
+  background-image: url('https://www.spacex.com/static/images/backgrounds-new/SpaceX_Careers_BG.webp');
+  /* background-position: center; */
+  background-position: 'bg-scroll';
+  /* background-repeat: no-repeat; */
+  background-size: cover;
+  height: 'h-full';
+
+  /* EXP */
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  /* background: #212121; */
+  font-family: sans-serif;
+}
+
+/* CARDS FOR COMPONENT LAUNCH */
+.box {
+  width: 1200px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-gap: 15px;
+  margin: 0 auto;
+}
+.card {
+  position: relative;
+  width: 350px;
+  height: 350px;
+  background: #fff;
+  margin: 0 auto;
+  border-radius: 4px;
+  /* box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); */
+  box-shadow: 0 2px 10px rgba(244, 241, 241, 0.2);
+  margin: 2.5rem 0rem;
+}
+.carded {
+  position: relative;
+  width: 350px;
+  height: 350px;
+  background: #fff;
+  margin: 0 auto;
+  border-radius: 4px;
+  /* box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); */
+  box-shadow: 0 2px 10px rgba(244, 241, 241, 0.2);
+  margin: 2.5rem 0rem;
+}
+.carded:before,
+.carded:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 110%;
+  border-radius: 4px;
+  background: #fff;
+  transition: 0.5s;
+  z-index: -1;
+}
+.card:before,
+.card:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 110%;
+  border-radius: 4px;
+  background: #fff;
+  transition: 0.5s;
+  z-index: -1;
+}
+.card:hover:before {
+  transform: rotate(20deg);
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+}
+.card:hover:after {
+  /* height: 110%; */
+  /* margin: 2rem 0rem; */
+  transform: rotate(10deg);
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+}
+.carded .imgBx {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  bottom: 10px;
+  right: 10px;
+  background: #222;
+  transition: 0.5s;
+  z-index: 1;
+}
+.card .imgBx {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  bottom: 10px;
+  right: 10px;
+  background: #222;
+  transition: 0.5s;
+  z-index: 1;
+}
+
+.card:hover .imgBx {
+  bottom: 80px;
+}
+
+.carded .imgBx img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.card .imgBx img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card .details {
+  position: absolute;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  height: 60px;
+  text-align: center;
+}
+
+.card .details h2 {
+  margin: 0;
+  padding: 0;
+  font-weight: 600;
+  font-size: 20px;
+  color: #777;
+  text-transform: uppercase;
+}
+
+.card .details h2 span {
+  font-weight: 600;
+  font-size: 15px;
+  color: #f38695;
+  color: #429bb8;
+  display: block;
+  margin-top: 5px;
+}
+
+/* FOR LAUNCH PAGE */
+:root {
+  --clr-white: rgb(255, 251, 251);
+  --radius: 0.25rem;
+  --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --transition: all 0.3s linear;
+}
+.review {
+  /* width: 50vh; */
+  /* background: var(--clr-white); */
+  /* padding: 1.5rem 30rem; */
+  border-radius: var(--radius);
+  box-shadow: var(--light-shadow);
+  transition: var(--transition);
+  /* color: var(--clr-white); */
+  color: rgb(240, 240, 240);
+  text-align: center;
+}
+.img-container {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin: 0 auto;
+  margin-bottom: 1.5rem;
+}
+.person-img {
+  width: 100%;
+  display: block;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  position: relative;
+}
+.img-container::before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  background: var(--clr-primary-5);
+  position: absolute;
+  top: -0.25rem;
+  right: -0.5rem;
+  border-radius: 50%;
+}
+.author {
+  margin-bottom: 0.5rem;
+}
+
+.detail {
+  margin-bottom: 0.75rem;
+}

@@ -1,0 +1,15 @@
+overwrite: true
+# Where to get the api schema from
+schema: 'https://api.spacex.land/graphql/'
+# the client side queries to turn into services
+documents: 'graphql/queries.ts'
+# Where to output the services and the list of plugins
+generates:
+  graphql/graphql.ts:
+    plugins:
+      - 'typescript'
+      - 'typescript-operations'
+      - 'typescript-react-apollo'
+  ./graphql.schema.json:
+    plugins:
+      - 'introspection'
